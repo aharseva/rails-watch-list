@@ -1,0 +1,23 @@
+<div class="banner">
+    <h1>Save any movie</h1>
+    <p>Categorise your favourite movies</p>
+  </div>
+</div>
+
+<div class="container">
+<h2> My lists </h2>
+
+  <div class="row">
+     <% @lists.each do |list| %>
+      <div class="col-md-4">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <div class="list-card">
+          <h5 class="no-underline"> <%= link_to list.name, list_path(list) %></h5>
+          </div>
+        </div>
+      </div>
+      <%= link_to "Delete", list_delete_path(list), data: {turbo_method: :delete}%>
+
+     <% end %>
+  </div>
+</div>
