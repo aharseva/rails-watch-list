@@ -11,11 +11,11 @@
      <% @list.bookmarks.each do |bookmark| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <div class="bg-white rounded shadow h-100">
-          <%= image_tag(bookmark.movie.poster_url) %>
-        </div>
-        <div class="p-3 rounded-bottom d-flex flex-column">
-          <strong><%= bookmark.movie.title %></strong>
-          <small class="text-muted"><%= bookmark.movie.overview %></small>
+          <%= image_tag(bookmark.movie.poster_url, class: "movie-img rounded-top") %>
+          <div class="p-3 rounded-bottom d-flex flex-column">
+            <strong><%= bookmark.movie.title %></strong>
+            <small class="text-muted"><%= bookmark.movie.overview %></small>
+          </div>
         </div>
       </div>
      <% end %>
