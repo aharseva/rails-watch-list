@@ -1,8 +1,10 @@
 .banner {
   width: 100%;
-  height: 470px;
+  height: 500px;
   background-image: asset-url("cinema-seats.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .banner h1 {
@@ -15,5 +17,4 @@
 .banner p {
   color: white;
   text-align: center;
-  padding: 10%;
 }
